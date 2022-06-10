@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.ts",
+    "**/*.html",
+    "**/*.json",
+    "./src/assets/**"
+  ],
+  "rules": {
+    "plugin/rational-order": [
+      true,
+      {
+        "empty-line-between-groups": true
+      }
+    ],
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": [
+          "inside-block"
+        ]
+      }
+    ],
+    "selector-class-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}

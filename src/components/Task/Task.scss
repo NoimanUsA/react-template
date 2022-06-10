@@ -1,0 +1,28 @@
+.task {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 150px;
+  height: fit-content;
+  padding: 10px 10px 10px 20px;
+
+  color: white;
+
+  border-radius: 5px;
+
+user-select: none;
+
+  &__text {
+    width: 80%;
+
+    font-weight: 500;
+    overflow-wrap: break-word;
+  }
+
+  &__handler {
+    cursor: pointer;
+  }
+}

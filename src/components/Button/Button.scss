@@ -1,0 +1,17 @@
+.button {
+  padding: 10px 20px;
+
+  color: white;
+
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-main-color);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
