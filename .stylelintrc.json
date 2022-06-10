@@ -1,13 +1,36 @@
 {
-  "extends": "stylelint-config-standard-scss",
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier",
+    "stylelint-config-recommended"
+  ],
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.json",
+    "./src/assets/**"
+  ],
   "rules": {
-    "at-rule-no-unknown": [
+    "plugin/rational-order": [
       true,
       {
-        "ignoreAtRules": ["extends"]
+        "empty-line-between-groups": true
       }
     ],
-    "block-no-empty": null,
-    "unit-allowed-list": ["em", "rem", "s", "px", "%", "deg"]
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": [
+          "inside-block"
+        ]
+      }
+    ],
+    "selector-class-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null
   }
 }

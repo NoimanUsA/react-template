@@ -1,0 +1,5 @@
+#!/bin/sh
+./"$(dirname "$0")/_/husky.sh"
+
+npx stylelint ./src --fix
+npx eslint ./src --fix

@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: var(--dark-color);
+
+  &__nav {
+    display: flex;
+
+    list-style: none;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+
+    border-bottom: 5px solid transparent;
+  &--active {
+    color: var(--main-color);
+
+    border-bottom: 5px solid var(--main-color);
+  }
+
+  }
+
+  &__nav-link, &__exit {
+    padding: 10px;
+
+    color: white;
+
+    cursor: pointer;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+
+}

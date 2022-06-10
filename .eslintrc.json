@@ -1,27 +1,69 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "extends": ["airbnb-base", "airbnb-typescript/base", "plugin:node/recommended", "prettier", "eslint:recommended"],
-  "plugins": ["prettier"],
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:react/recommended",
+    "prettier",
+    "eslint:recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 2020,
-    "project": "./tsconfig.json"
+    "project": "**/tsconfig.json"
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "localStorage": true,
+    "fetch": true,
+    "JSX": "readonly"
   },
   "rules": {
-    "prettier/prettier": [
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "no-case-declarations:": 0,
+    "import/prefer-default-export": 0,
+    "import/extensions": [
       "error",
-      {},
       {
-        "usePrettierrc": true
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ],
-    "@typescript-eslint/naming-convention": [
+    "no-param-reassign": [
       "error",
       {
-        "selector": "default",
-        "format": ["camelCase", "strictCamelCase", "PascalCase", "StrictPascalCase", "snake_case", "UPPER_CASE"],
-        "leadingUnderscore": "allow",
-        "trailingUnderscore": "allow"
+        "props": false
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "computed-property-spacing": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "always",
+      {
+        "objectsInArrays": false,
+        "arraysInArrays": false
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "objectsInObjects": false,
+        "arraysInObjects": false
       }
     ],
     "no-unused-vars": "warn",
