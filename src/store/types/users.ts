@@ -1,4 +1,0 @@
-export enum USERS {
-  REGISTER_USER = "REGISTER_USER",
-  CHECK_USER = "CHECK_USER"
-}
